@@ -1,8 +1,12 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch';
+import cors from 'cors'; // Импорт CORS
 
 const app = express();
+
+// Включаем CORS для всех запросов
+app.use(cors());
 app.use(bodyParser.json());
 
 const BOT_TOKEN = '7565594920:AAFr_PBq22jFw5Fxa3YMl2jlyI5IaLpNTEo';
